@@ -12,16 +12,12 @@ public class LogAnalyzer
      private ArrayList<LogEntry> records;
      
      public LogAnalyzer()  {
-         // complete constructor
-         records = new ArrayList<LogEntry>();
-         
+         records = new ArrayList<LogEntry>();    
      }
         
      public void readFile(String filename) throws IOException   {
          try {
-         // FileResource resource = new FileResource(filename);
-         BufferedReader br = new BufferedReader(new FileReader(filename));
-
+        	 BufferedReader br = new BufferedReader(new FileReader(filename));
          for (String line = br.readLine(); line != null; line = br.readLine()) {
              ArrayList<String> parse1 = parseString(line);
              ArrayList<Integer> parse2 = parseInt(line);
@@ -54,7 +50,6 @@ public class LogAnalyzer
      }
      public ArrayList<String> parseString (String line) {
          ArrayList<String> parsed = new ArrayList<String>();
-         //substring(inclusive, exclusive)
          String ip = line.substring(0,line.indexOf(" "));
          parsed.add(ip);
          String access = line.substring(line.indexOf("[")+1,line.indexOf("]")-6);

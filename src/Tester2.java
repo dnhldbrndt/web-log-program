@@ -18,7 +18,6 @@ public class Tester2
         try {
 			la.readFileNew("weblog3-short_log");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
         la.printAll();

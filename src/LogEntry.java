@@ -12,14 +12,12 @@ public class LogEntry
        accessTime = time;
        request = req;
        statusCode = status;
-       bytesReturned = bytes;
-       
+       bytesReturned = bytes;     
    }
-   
    public String getIpAddress() {
          return ipAddress;
-    }
-    public Date getAccessTime() {
+   }
+   public Date getAccessTime() {
          return accessTime;
    }   
    public String getRequest() {
@@ -31,9 +29,8 @@ public class LogEntry
    public int getBytesReturned() {
          return bytesReturned;
    }
-   
    public String toString() {
        return ipAddress + " " + accessTime + " " + request 
            + " " + statusCode + " " + bytesReturned;
-    }
+   }
 }

@@ -12,15 +12,10 @@ public class Tester
     }
     
     public void testLogAnalyzer() {
-        // complete method
-        //LogAnalyzer la = new LogAnalyzer();
-        //la.readFile("short-test_log");
-        //la.printAll();
         LogAnalyzer la2 = new LogAnalyzer();
         try {
 			la2.readFileNew("weblog2_log");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
         la2.printAll();
@@ -45,7 +40,6 @@ public class Tester
         try {
 			la.readFileNew("weblog2_log");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
         la.printAll();
